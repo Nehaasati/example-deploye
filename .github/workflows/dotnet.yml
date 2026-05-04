@@ -30,15 +30,6 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
-# Installera Node.js och aktivera npm-cache via lockfiler.
-    - name: Use Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "npm"
-          cache-dependency-path: |
-            Frontend/package-lock.json
-            Testing/SystemTests/package-lock.json
 
       # Installera frontend-beroenden deterministiskt.
     - name: Install frontend dependencies
