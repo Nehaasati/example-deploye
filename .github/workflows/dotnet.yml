@@ -24,8 +24,9 @@ jobs:
       # Download and restore all NuGet dependencies for the .NET project
     - name: Restore dependencies
       run: dotnet restore
-      # Compile the .NET solution (skip restore since dependencies were already 
+       
     - name: Build
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
